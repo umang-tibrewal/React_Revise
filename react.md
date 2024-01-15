@@ -1,25 +1,32 @@
 # REACT
-## React it is use to handle complex framework
+##why react ?
+ React it is use to handle complex framework
 
-### facebook fantom problem to solve
- ### state javascript 
- ### dom should talk efficiently
+### PROBLEM IT SOLVE
+facebook fantom problem to solve
+ state javascript 
+ dom should talk efficiently
 
- ## react is a library or framework
-### library is like cool dude less striction
-### framework has more rules and restriction
+ ### FRAMEWORK OR LIBRARY 
+
+ react is a library or framework
+
+library is like cool dude less striction
+
+framework has more rules and restriction
+
 react is a javascript library
 react ->|->react -dom
         |->react -native
 
-
+###   npm and  npx
 npm ->node pakage modular 
 use to install libraries
 npx-node pacage executer donot install directly execute
 create react app->an utility(software)
 
 
-## To way to create react app
+### To way to create react app
 
 1) npx create-react-app appName
 
