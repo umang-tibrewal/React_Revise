@@ -3,11 +3,11 @@ import React from 'react'
 import './App.css'
 import Hello from './Hello'
 
-let a="click with"
+let a="Learning React with Umang Tibrewal"
 let Customelemnt=React.createElement(
 
   'p',
-  {style:{color:"red"}},
+  {style:{color:"Purple"}},
   a
 )
 
@@ -27,7 +27,8 @@ function App() {
   return (
     
    <>
-
+   <Hello  />
+    { Customelemnt}
     <h1>{count.id}</h1>
     <button onMouseLeave={handleup}>COUNT UP</button>
     <button onMouseMove={handledown}>COUNT DOWN </button>
