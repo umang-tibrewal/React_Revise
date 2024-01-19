@@ -12,16 +12,17 @@ let Customelemnt=React.createElement(
 )
 
 function App() {
-  const [count, setCount] = useState({id:0,fno:0})
+  const [count, setCount] = useState(25)
 
   function handleup(){
 
-    setCount({id:count.id+1000});
+    setCount((prevcount)=>prevcount+1);
+    setCount((prevcount)=>prevcount+1);
   }
 
   function handledown(){
 
-    setCount({id:1000})
+    setCount(0)
   }
 
   return (
@@ -29,7 +30,8 @@ function App() {
    <>
    <Hello  />
     { Customelemnt}
-    <h1>{count.id}</h1>
+    <h1>{count}</h1>
+  
     <button onMouseLeave={handleup}>COUNT UP</button>
     <button onMouseMove={handledown}>COUNT DOWN </button>
    </>

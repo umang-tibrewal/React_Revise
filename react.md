@@ -101,7 +101,7 @@ The main benifit of react is that when we want to update a state ie basicaly whi
 let [value,setvalue]=usestate(0);
 fuction increment(){
 
-        setvalue(value=value+1)
+        setvalue(value+1)
 }
 
 ```
