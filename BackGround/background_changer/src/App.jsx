@@ -7,18 +7,18 @@ function App() {
   const [color, setColor] = useState("lavender")
   let a= document.getElementsByTagName("body")[0];
   a.style.backgroundColor=color;
-function colorfun(colorvalue){
 
-  return (function colorwill(){
+
+function colorwill(colorvalue){
 
      setColor(colorvalue);
   }
-  )
-}
+  
+
   return (
     
 <>
-   <button onClick={setColor("olive")}>Olive</button>
+   <button onClick={()=>{colorwill("olive")}}>Olive</button>
    </>
    
     

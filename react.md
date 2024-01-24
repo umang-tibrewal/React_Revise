@@ -1,5 +1,5 @@
 # REACT
-### why react ?
+### Why react ?
  React it is use to handle complex framework
 
 ### PROBLEM IT SOLVE
@@ -114,6 +114,12 @@ function increment(){
         setobj({id:obj.id+1})
 }
 
+// If we have senario where we want to  use set such that we want to acess previous value of set 
+Interview q 
+
+// To solve that
+
+setcount((prev)=>{ return(prev+1)})
 
 
 ```
@@ -155,6 +161,75 @@ we know the concept of virtualdom in react, react  donot update the whole page a
 with create root react create its own dom tree know as virtual tree and then compare it with browser tree this process is called reconciliation 
 the changes is made by react fiber algorithm the key feature of this alogirthm is it has pause ,priority to diffrent type of update ,
 abort or reuse work
+
+ ### Onclick 
+ To add functionality on button
+ the point here is onlick execpt a refrence to function  not execution
+ ```React 
+ 
+ function clickme(msg){
+
+        console.log(clickme)
+ }
+
+ <button onClick={()=>{
+        clickme(msg)
+ }} >
+  click me</button>
+ 
+
+ <button onClick={clickme("click me")}> click me</button>
+ // directly execute
+
+
+ //we can achive this by lexical scope and closure
+
+ function click(msg){
+ 
+  return (function clickme(msg){
+
+        console.log(msg)
+  })
+
+ }
+
+ <button onClick={click("click me ")}>click me</button>
+ 
+ ```
+
+ ### Props
+ Props are use to pass parameter to a component 
+
+
+```React
+
+import React from 'react'
+
+function Card({username,value}) {
+  return (
+   <>
+    <h1>hello {username },{value.class}</h1>
+   </>
+  )
+}
+
+export default Card
+
+
+ return (
+    <>
+    <Card username="umang " value= {obj1} />
+     <h1 className='bg-green-500 text-blue-100 rounded-xl text-md p-7'>Hello tailwind with reacts</h1>
+    </>
+  )
+
+
+
+
+
+```
+
+
 
 
 
