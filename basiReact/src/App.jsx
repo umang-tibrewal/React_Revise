@@ -14,7 +14,7 @@ let Customelemnt=React.createElement(
 function App() {
   const [count, setCount] = useState(25)
 
-  function handleup(){
+  function handleup(){- 
 
     setCount((prevcount)=>prevcount+1);
     setCount((prevcount)=>prevcount+1);
