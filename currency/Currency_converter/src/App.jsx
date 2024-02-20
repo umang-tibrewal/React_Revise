@@ -4,28 +4,30 @@ import Currencyinfo from './assets/Hooks/Currencyinfo'
 import { useEffect } from 'react'
 import Index from './assets/Component/Input'
 
-let a;
+
 function App() {
   const [from, setfrom] = useState("usd")
   const[amount,setamount]=useState(500)
-  const [To,setTO]=useState("Inr")
+  const [To,setTO]=useState("inr")
   const[calamount,setcalamount]=useState(0)
 
 
-let rate=Currencyinfo(from)
   let option =Object.keys(Currencyinfo(from))
 
   let swap=()=>{
 
     setfrom(To)
     setTO(from)
-     a=amount
-    setamount(calamount)
-    setcalamount(a)
+    let a=calamount
+    setcalamount(amount)
+setamount(calamount)
+
+ 
   }
   
  
 
+  let rate=Currencyinfo(from)
   let calculate= ()=>{
 
     let ramount=amount*rate[To];
@@ -52,7 +54,7 @@ let rate=Currencyinfo(from)
    }}>
    <Index  lable={from} amount={amount}  countrylist={option} onchangecountrylist={(e)=>{setfrom(e)}}   onchangeamount={(e)=>{setamount(e)}}/>
     <button onClick={swap}> swap</button>
-    <Index  lable={To} amount={calamount}  countrylist={option} onchangecountrylist={(e)=>{setTO(e)}}   />
+    <Index  lable={To} amount={calamount}  countrylist={option} onchangecountrylist={(e)=>{setTO(e)}}  onchangeamount={(e)=>{setcalamount(e)}} />
 
     <button>Submit</button>
    
